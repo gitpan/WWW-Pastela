@@ -1,0 +1,82 @@
+#!/usr/bin/perl -w
+use strict;
+use warnings;
+use WWW::Pastela::App;
+
+WWW::Pastela::App->run;
+
+__END__
+
+=encoding UTF-8
+
+=head1 NAME
+
+pastela - the command line interface for pasting code on <http://paste.la/>
+
+
+=head1 SYNOPSIS
+
+pastela [options] FILE_PATH
+
+    $ pastela my_code.pl
+    http://paste.la/FooBar12
+
+Options:
+
+    --title   Title of code
+    --name    Your name
+    --lang    Language of code
+    --expire  Expire setting of code
+    --hide    Hide a code from list
+    --help    Show this help
+    --version Show version
+
+Example:
+
+specified name
+
+    $ pastela --name bayashi my_code.pl
+
+specified name and lang
+
+    $ pastela --name bayashi --lang Perl my_code.pl
+
+--hide option hides the code from list,
+
+    $ pastela --hide my_code.pl
+    http://paste.la/FooBar12
+
+then the code can be read only by someone who knows the code key.
+
+
+CONFIGURATION:
+
+F<pastela> will look for a configuration file before reading its command line parameters.
+The default location is C<$HOME/.pastela/config>
+but if the PASTELA_DIR environment variable is set, F<pastela> will look for C<config> in that directory.
+
+The configuration file is just a list of names and values, separated by colons.
+Values that take lists are just space separated.
+
+A sample configuration file might read:
+
+    name: bayashi
+
+
+=head1 AUTHOR
+
+Dai Okabayashi E<lt>bayashi@cpan.orgE<gt>
+
+
+=head1 SEE ALSO
+
+L<WWW::Pastela>, L<WWW::Pastela::App>
+
+
+=head1 LICENSE
+
+This module is free software; you can redistribute it and/or
+modify it under the same terms as Perl itself. See L<perlartistic>.
+
+
+=cut

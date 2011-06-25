@@ -1,0 +1,32 @@
+---
+abstract: 'paste a code easily on paste.la'
+author:
+  - 'Dai Okabayashi <bayashi@cpan.org>'
+build_requires:
+  Test::More: 0.88
+configure_requires:
+  Module::Build: 0.36
+generated_by: 'Module::Build version 0.3607'
+license: perl
+meta-spec:
+  url: http://module-build.sourceforge.net/META-spec-v1.4.html
+  version: 1.4
+name: WWW-Pastela
+provides:
+  WWW::Pastela:
+    file: lib/WWW/Pastela.pm
+    version: 0.04
+  WWW::Pastela::App:
+    file: lib/WWW/Pastela/App.pm
+requires:
+  Carp: 0
+  Class::Accessor::Lite: 0.05
+  Furl: 0.32
+  Getopt::Long: 0
+  Path::Class: 0
+  Pod::Usage: 0
+  Web::Scraper: 0
+resources:
+  license: http://dev.perl.org/licenses/
+  repository: http://github.com/bayashi/WWW-Pastela
+version: 0.04

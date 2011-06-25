@@ -1,0 +1,16 @@
+Revision history for Perl extension WWW::Pastela
+
+0.04    05:48 2011/06/26
+        - tiny fix (optimized step)
+        - use 'croak' to exception instead of using 'die'
+
+0.03    18:28 2011/06/25
+        - added compile tests
+        - fixed POD(added blocks about configuration and CLI Example)
+        - changed feature: recieve args called the paste method
+
+0.02    00:33 2011/06/24
+        - just work
+
+0.01    Wed Jun 15 23:17:55 2011
+        - original version
